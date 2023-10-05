@@ -6,16 +6,12 @@ Finding a new movie to watch can be a long process and take up all the time you 
 
 
 
-3 | Architectural Design 
+3 | Architectual Design 
 
-The movie review application will show a list of movies from a database of movies. The user will be able to choose a movie that they like. They will then be recommended movies that they might like based on the actors in the movie selected. This will be a mobile application coded in Python. 
 
 3.1 | Class Diagram 
 
-<figure>
-
-
-</figure>
+[![Alt text](https://lucid.app/lucidchart/3edb5f91-d010-41f6-b7a3-88d72704611d/edit?invitationId=inv_e54de820-e3df-464e-bc2e-d92e03dbb0ac&page=0_0#)](https://lucidchart.com)
 
 3.2 | Sequence Diagram 
 
