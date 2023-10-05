@@ -11,7 +11,11 @@ Finding a new movie to watch can be a long process and take up all the time you 
 
 3.1 | Class Diagram 
 
-![Use Case](https://lucid.app/lucidchart/3edb5f91-d010-41f6-b7a3-88d72704611d/edit?invitationId=inv_e54de820-e3df-464e-bc2e-d92e03dbb0ac&page=0_0# "Use Case")
+<figure>
+
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/3edb5f91-d010-41f6-b7a3-88d72704611d" id="7ofBYf3JcP6a"></iframe></div>
+
+</figure>
 
 3.2 | Sequence Diagram 
 
