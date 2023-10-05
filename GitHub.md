@@ -6,8 +6,9 @@ Finding a new movie to watch can be a long process and take up all the time you 
 
 
 
-3 | Architectual Design 
+3 | Architectural Design 
 
+The movie review application will show a list of movies from a database of movies. The user will be able to choose a movie that they like. They will then be recommended movies that they might like based on the actors in the movie selected. This will be a mobile application coded in Python. 
 
 3.1 | Class Diagram 
 
