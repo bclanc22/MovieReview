@@ -15,3 +15,14 @@ Finding a new movie to watch can be a long process and take up all the time you 
 
 
 </figure>
+
+3.2 | Sequence Diagram 
+
+
+4 | UI 
+
+
+5 | Conclusion 
+
+
+6 | Walkthrough Video 
