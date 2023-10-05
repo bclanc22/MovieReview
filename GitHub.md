@@ -13,7 +13,6 @@ Finding a new movie to watch can be a long process and take up all the time you 
 
 <figure>
 
-<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/3edb5f91-d010-41f6-b7a3-88d72704611d" id="7ofBYf3JcP6a"></iframe></div>
 
 </figure>
 
