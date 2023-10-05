@@ -13,7 +13,7 @@ Finding a new movie to watch can be a long process and take up all the time you 
 
 <body>
     <div style="width: 640px; height: 480px; margin: 10px; position: relative;">
-        <img src="UseCase.jpg" alt="UseCase.jpg">
+        <img src="UseCase.jpg" alt="UseCase">
     </div>
 </body>
 
