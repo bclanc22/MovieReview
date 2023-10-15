@@ -22,6 +22,11 @@ This app is designed using python and used on smartphones. We designed this app 
 
 4 | UI 
 
+<body>
+    <div style="width: 640px; height: 480px; margin: 10px; position: relative;">
+        <img src="MovieListEx1" alt="MovieList1">
+    </div>
+</body>
 
 5 | Conclusion 
 
