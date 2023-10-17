@@ -11,7 +11,11 @@ Finding a new movie to watch can be a long process and take up all the time you 
 This app is designed using python and used on smartphones. We designed this app for iPhones to assist users in finding a new movie quicker. The app will show users movie recommendations based on their favorite actors and actresses. Pick a movie you want and see the cast from that movie, now you can pick an actor or actress from that cast and see a list of popular movies that they are in. 
 
 3 | Architectual Design 
-
+<body>
+    <div style="width: 640px; height: 480px; margin: 10px; position: relative;">
+        <img src="Architectural Diagram.jpg" alt="ArchUML">
+    </div>
+</body>
 
 3.1 | Class Diagram 
 
