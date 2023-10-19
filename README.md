@@ -37,7 +37,7 @@ This app is designed using python and used on smartphones. We designed this app 
 
 <body>
     <div style="width: 640px; height: 480px; margin: 10px; position: relative;">
-        <img src="ClassDiagram.jpg" alt="ClassDiagram">
+        <img src="ClassDiagram.png" alt="ClassDiagram">
     </div>
 </body>
 
