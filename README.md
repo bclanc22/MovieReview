@@ -17,7 +17,7 @@ This app is designed using python and used on smartphones. We designed this app 
     </div>
 </body>
 
-3.1 | Class Diagram 
+3.1 | Use Case Diagram 
 
 <body>
     <div style="width: 640px; height: 480px; margin: 10px; position: relative;">
@@ -33,6 +33,13 @@ This app is designed using python and used on smartphones. We designed this app 
     </div>
 </body>
 
+3.3 | Class Diagram
+
+<body>
+    <div style="width: 640px; height: 480px; margin: 10px; position: relative;">
+        <img src="ClassDiagram.jpg" alt="ClassDiagram">
+    </div>
+</body>
 
 4 | UI 
 
