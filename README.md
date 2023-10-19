@@ -27,6 +27,12 @@ This app is designed using python and used on smartphones. We designed this app 
 
 3.2 | Sequence Diagram 
 
+<body>
+    <div style="width: 640px; height: 480px; margin: 10px; position: relative;">
+        <img src="Sequence Diagram.jpeg" alt="SequenceDiagram">
+    </div>
+</body>
+
 
 4 | UI 
 
