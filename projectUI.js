@@ -44,6 +44,66 @@ let movieData = [
         id: '8',
         actors: ['Actor D', 'Actor R', 'Actor S']
     },
+    {
+        title: 'Movie 9',
+        id: '9',
+        actors: ['Actor A', 'Actor T', 'Actor U']
+    },
+    {
+        title: 'Movie 10',
+        id: '10',
+        actors: ['Actor B', 'Actor V', 'Actor W']
+    },
+    {
+        title: 'Movie 11',
+        id: '11',
+        actors: ['Actor C', 'Actor X', 'Actor Y']
+    },
+    {
+        title: 'Movie 12',
+        id: '12',
+        actors: ['Actor H', 'Actor Z', 'Actor I']
+    },
+    {
+        title: 'Movie 13',
+        id: '13',
+        actors: ['Actor A', 'Actor D', 'Actor B']
+    },
+    {
+        title: 'Movie 14',
+        id: '14',
+        actors: ['Actor E', 'Actor Y', 'Actor Z']
+    },
+    {
+        title: 'Movie 15',
+        id: '15',
+        actors: ['Actor L', 'Actor X', 'Actor N']
+    },
+    {
+        title: 'Movie 16',
+        id: '16',
+        actors: ['Actor M', 'Actor S', 'Actor Q']
+    },
+    {
+        title: 'Movie 17',
+        id: '17',
+        actors: ['Actor P', 'Actor T', 'Actor J']
+    },
+    {
+        title: 'Movie 18',
+        id: '18',
+        actors: ['Actor C', 'Actor R', 'Actor W']
+    },
+    {
+        title: 'Movie 19',
+        id: '19',
+        actors: ['Actor G', 'Actor V', 'Actor U']
+    },
+    {
+        title: 'Movie 20',
+        id: '20',
+        actors: ['Actor K', 'Actor I', 'Actor F']
+    },
 ];
 
 searchBtn.addEventListener('click', searchMovies);
@@ -56,7 +116,9 @@ function searchMovies() {
     }
 
     const filteredMovies = movieData.filter(movie => movie.title.toLowerCase().includes(searchTerm));
-    displayMovies(filteredMovies);
+    const top5Movies = filteredMovies.slice(0, 5); // Limit to the top 5 results
+
+    displayMovies(top5Movies);
 }
 
 function displayMovies(movies) {
