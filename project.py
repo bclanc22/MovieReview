@@ -1,7 +1,9 @@
 import csv
 
 def fetchActorsFromDataBase():
-
+    """
+    Reads the data and returns a list of actors
+    """
     actors = []
 
     with open('IMDB-Movie-Data.csv', 'r') as file:
@@ -11,6 +13,9 @@ def fetchActorsFromDataBase():
     return actors
 
 def fetchMoviesFromDataBase():
+    """
+    Reads the data and returns a list of movies
+    """
 
     movies = []
 
@@ -21,6 +26,9 @@ def fetchMoviesFromDataBase():
     return movies
 
 def searchMovieByTitle(title):
+    """
+    Searches the data for a specific movie title
+    """
     movies = fetchMoviesFromDataBase()
 
     for m in movies:
