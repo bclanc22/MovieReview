@@ -9,7 +9,8 @@ def fetchActorsFromDataBase():
     with open('IMDB-Movie-Data.csv', 'r') as file:
         reader = csv.reader(file)
         for row in reader:
-            actors.append(row[5])
+            if row[5] not in actors:
+                actors.append(row[5])
     return actors
 
 def fetchMoviesFromDataBase():
@@ -28,12 +29,21 @@ def fetchMoviesFromDataBase():
 def searchMovieByTitle(title):
     """
     Searches the data for a specific movie title
+    Returns the Title, Actors, and year made
     """
-    movies = fetchMoviesFromDataBase()
 
-    for m in movies:
-        if m == title:
-            return m
+    info = []
+
+    with open('IMDB-Movie-Data.csv', 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if row[1] == title:
+                info.append(row[1])
+                info.append(row[5])
+                info.append(row[6])
+
+                return info
+
 
 def searchActorsByMovie(movie):
 
@@ -64,3 +74,9 @@ def reccomneded_movies(actor):
             if actor in row[5]:
                 movies.append(row[1])
         return movies
+
+
+#print(fetchActorsFromDataBase())
+#print(fetchMoviesFromDataBase())
+#print(searchMovieByTitle("Split"))
+#print(searchActorsByMovie("Split"))
