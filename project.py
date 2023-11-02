@@ -64,13 +64,3 @@ def reccomneded_movies(actor):
             if actor in row[5]:
                 movies.append(row[1])
         return movies
-
-
-users = []
-
-def login():
-    username = input()
-    password = input()
-
-    if username not in users:
-        print('There is no username associated with what was entered')
