@@ -49,6 +49,7 @@ This app is designed using python and javascript as a web app. We designed this 
     </div>
 </body>
 
+
 5 | Functions
 
 read_csv(file_path)
@@ -66,6 +67,7 @@ Returns a list of recommended movies that share at least one genre with the prov
 get_movies_by_director(movie_title, data)
 Returns a list of recommended movies that share the same director as the provided movie.
 
+
 6 | Endpoints
 
 GET /recommendations
@@ -81,6 +83,7 @@ Response
     "genre": ["Recommended Movie 3", "Recommended Movie 4", ...],
     "director": ["Recommended Movie 5", "Recommended Movie 6", ...]
 }
+
 
 7 | Conclusion 
 
