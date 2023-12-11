@@ -1,4 +1,3 @@
-// Import the functions you want to test
 const { searchMovie, displayRecommendations } = require('C:\Users\coolj\OneDrive\Documents\CIS350\Project\frontend.html');
 // Mock XMLHttpRequest
 class MockXMLHttpRequest {
