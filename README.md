@@ -4,7 +4,7 @@ This app will allow users to get movie recommendations based on different actors
 
 1 | Abstract 
 
-Finding a new movie to watch can be a long process and take up all the time you even have to watch a movie in the first place. Our app is aimed to cut down on that issue and give users recommendations to new movies based on their favorite actors and actresses. A user can open the app and pick out a movie, let's say they like Forest Gump, they can know see other movies with the actors in that movie. They can pick out a Tom Hanks movie from a list of movies that he has been in. This will allow a user to choose a new movie much faster and save lots of time on movie nights. 
+Finding a new movie to watch can be a long process and take up all the time you even have to watch a movie in the first place. Our website is aimed to cut down on that issue and give users recommendations to new movies based on their favorite actors and actresses. A user can open the site and pick out a movie, let's say they like Forest Gump, they can know see other movies with the actors in that movie. They can pick out a Tom Hanks movie from a list of movies that he has been in. This will allow a user to choose a new movie much faster and save lots of time on movie nights. You can see all the best movies from our curated list. This allows each user to pick the perfect movie for them each night. You can discover new actors, actresses, and genres of movies to discover what you like the best. Picking a new movie shouldn't be a problem anymore with the help of our Movie Discovery website. 
 
 2 | Introduction 
 
