@@ -49,7 +49,24 @@ This app is designed using python and javascript as a web app. We designed this 
     </div>
 </body>
 
-5 | Conclusion 
+5 | Functions
+
+read_csv(file_path)
+Reads the CSV file containing movie data and returns a list of dictionaries representing movie details.
+
+get_movie_details_by_title(movie_title, data)
+Returns details of a movie if found in the dataset.
+
+get_movies_by_shared_actors(movie_title, data)
+Returns a list of recommended movies that share any actors with the provided movie.
+
+get_movies_by_genre(movie_title, data)
+Returns a list of recommended movies that share at least one genre with the provided movie.
+
+get_movies_by_director(movie_title, data)
+Returns a list of recommended movies that share the same director as the provided movie.
+
+6 | Conclusion 
 
 
-6 | Walkthrough Video 
+7 | Walkthrough Video 
