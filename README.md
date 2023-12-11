@@ -85,7 +85,8 @@ Response
 }
 
 
-7 | Risk analysis and Retrospective:
+7 | Risk analysis and Retrospective
+
 Many of the problems were associated with the integration of the backend with the front end. The front end and back end worked properly on their own, but the issues started to arise when using the front end to search for the movies. It was not finding the proper functions to be used. To fix this the address for the csv file was incorrect. Flask Cors also needed to be installed to prevent errors. 
 Another issue was with error handling. When a movie name not in the database was entered, it would not display the message "Movie Title Not Found". Instead, it would display the recommended movies for shared actors, genres, and directors. Except these would be empty. To fix this an if else statement was needed in the front end and the backend to display the proper message. 
 
