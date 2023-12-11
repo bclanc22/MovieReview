@@ -78,13 +78,14 @@ Parameters
 movieTitle (string): The title of the movie to get recommendations for.
 
 Response
-{
+
+    
     "shared_actors": ["Recommended Movie 1", "Recommended Movie 2", ...],
     
     "genre": ["Recommended Movie 3", "Recommended Movie 4", ...],
     
     "director": ["Recommended Movie 5", "Recommended Movie 6", ...]
-}
+
 
 
 7 | Risk analysis and Retrospective
