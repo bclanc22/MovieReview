@@ -11,6 +11,13 @@ def read_csv(file_path):
         data = [row for row in reader]
     return data
 
+# New search_movie function focusing on movie titles
+def search_movie(search_query, data):
+    # Perform a simple case-insensitive search by movie title
+    matching_movies = [movie for movie in data if search_query.lower() in movie['Title'].lower()]
+    return matching_movies
+
+
 def get_movie_details_by_title(movie_title, data):
     """
     Takes a movie title as input and returns its details if found in the data.
