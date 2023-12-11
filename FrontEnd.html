@@ -3,73 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Recommender</title>
+    <title>Movie Recommendations</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        input, button {
-            margin-bottom: 10px;
-        }
-
-        #recommendations {
-            margin-top: 20px;
-        }
+        /* Add your CSS styles here */
     </style>
 </head>
 <body>
 
-<h1>Movie Recommender</h1>
+    <label for="movieTitle">Enter Movie Title:</label>
+    <input type="text" id="movieTitle">
+    <button onclick="searchMovie()">Search</button>
 
-<label for="movieTitle">Search for a Movie:</label>
-<input type="text" id="movieTitle" placeholder="Enter movie title">
-<button onclick="searchMovie()">Search</button>
-
-<div id="recommendations">
-    <h2>Recommendations:</h2>
     <ul id="recommendationList"></ul>
-</div>
 
-<script>
-    function searchMovie() {
-        // Get the input value
-        const movieTitle = document.getElementById('movieTitle').value;
+    <!-- Buttons for displaying specific recommendations -->
+    <button onclick="displayRecommendation('shared_actors')">Recommendations Based on Shared Actors</button>
+    <button onclick="displayRecommendation('genre')">Recommendations Based on Genre</button>
+    <button onclick="displayRecommendation('director')">Recommendations Based on Director</button>
 
-        // Make an AJAX request to the backend
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', `backend_endpoint?movieTitle=${encodeURIComponent(movieTitle)}`, true);
+    <script>
+        function searchMovie() {
+            const searchQuery = document.getElementById('movieTitle').value;
+            const xhr = new XMLHttpRequest();
 
-        xhr.onload = function () {
-            if (xhr.status >= 200 && xhr.status < 300) {
-                // Parse the JSON response
-                const response = JSON.parse(xhr.responseText);
+            xhr.open('GET', `/search?searchQuery=${encodeURIComponent(searchQuery)}`, true);
 
-                // Display recommendations
-                displayRecommendations(response);
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    const searchResults = JSON.parse(xhr.responseText);
+                    displaySearchResults(searchResults);
+                } else {
+                    console.error('Error fetching search results from the server');
+                }
+            };
+
+            xhr.send();
+        }
+
+        function displaySearchResults(searchResults) {
+            const recommendationList = document.getElementById('recommendationList');
+            recommendationList.innerHTML = '';
+
+            if (searchResults.length === 0) {
+                const noResultsMessage = document.createElement('li');
+                noResultsMessage.textContent = 'No matching movies found.';
+                recommendationList.appendChild(noResultsMessage);
             } else {
-                console.error('Error fetching data from the server');
+                for (const movie of searchResults) {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `Title: ${movie['Movie Title']}`;
+                    recommendationList.appendChild(listItem);
+                }
             }
-        };
+        }
 
-        xhr.send();
-    }
+        function displayRecommendation(type) {
+            const movieTitle = document.getElementById('movieTitle').value;
+            const xhr = new XMLHttpRequest();
 
-    function displayRecommendations(recommendations) {
-        const recommendationList = document.getElementById('recommendationList');
+            xhr.open('GET', `/recommendations?type=${type}&movieTitle=${encodeURIComponent(movieTitle)}`, true);
 
-        // Clear previous recommendations
-        recommendationList.innerHTML = '';
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    const response = JSON.parse(xhr.responseText);
+                    displayRecommendations(response);
+                } else {
+                    console.error('Error fetching data from the server');
+                }
+            };
 
-        // Display the new recommendations
-        recommendations.forEach(movie => {
-            const listItem = document.createElement('li');
-            listItem.textContent = movie;
-            recommendationList.appendChild(listItem);
-        });
-    }
-</script>
+            xhr.send();
+        }
 
+        function displayRecommendations(recommendations) {
+            const recommendationList = document.getElementById('recommendationList');
+            recommendationList.innerHTML = '';
+
+            // Display details of the selected movie
+            const details = recommendations.details;
+            const detailsElement = document.createElement('li');
+            detailsElement.textContent = `Details: ${JSON.stringify(details)}`;
+            recommendationList.appendChild(detailsElement);
+
+            // Display recommendations
+            for (const key in recommendations) {
+                if (key !== 'details' && recommendations[key]) {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${key}: ${JSON.stringify(recommendations[key])}`;
+                    recommendationList.appendChild(listItem);
+                }
+            }
+        }
+    </script>
 </body>
 </html>
