@@ -99,4 +99,9 @@ The final UI did not turn out to look the way that it was originally displayed. 
 
 8 | Walkthrough Video 
 
+
+
+https://github.com/bclanc22/MovieReview/assets/122484101/3368edc8-0aa9-44c7-ac5a-84c9cd4ad224
+
+
 https://github.com/bclanc22/MovieReview/blob/main/Movie%20Recommender.pptx
