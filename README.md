@@ -94,7 +94,7 @@ Many of the problems were associated with the integration of the backend with th
 Another issue was with error handling. When a movie name not in the database was entered, it would not display the message "Movie Title Not Found". Instead, it would display the recommended movies for shared actors, genres, and directors. Except these would be empty. To fix this an if else statement was needed in the front end and the backend to display the proper message. 
 
 An application was built that allows a user to search for a movie title and find other similar titles that have shared actors, genres, and directors.
-The final UI did not turn out to look the way that it was originally displayed. Some more time and experimentation with the front end would have made it look better.
+The final UI did not turn out to look the way that it was originally displayed. Some more time and experimentation with the front end would have made it look better. For the search of a movie title, added functionality would be an improvement. For instance, if the name of a movie typed is not spelled correctly, it could ask the user if they meant something else. Or as the user types the name of a movie, a list of movies will show up so that they can select it from the list instead of typing the entire name. 
 
 
 8 | Walkthrough Video 
