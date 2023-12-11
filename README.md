@@ -66,7 +66,23 @@ Returns a list of recommended movies that share at least one genre with the prov
 get_movies_by_director(movie_title, data)
 Returns a list of recommended movies that share the same director as the provided movie.
 
-6 | Conclusion 
+6 | Endpoints
+
+GET /recommendations
+Description
+This endpoint retrieves movie recommendations based on the provided movie title. It returns a JSON object containing recommended movies based on shared actors, genres, and directors.
+
+Parameters
+movieTitle (string): The title of the movie to get recommendations for.
+
+Response
+{
+    "shared_actors": ["Recommended Movie 1", "Recommended Movie 2", ...],
+    "genre": ["Recommended Movie 3", "Recommended Movie 4", ...],
+    "director": ["Recommended Movie 5", "Recommended Movie 6", ...]
+}
+
+7 | Conclusion 
 
 
-7 | Walkthrough Video 
+8 | Walkthrough Video 
