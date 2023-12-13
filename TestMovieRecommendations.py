@@ -18,16 +18,13 @@ class TestMovieRecommendations(unittest.TestCase):
     def test_get_movies_by_shared_actors(self):
         columns = MovieRecommendation.loop_through_column("Title")
         for movie_title in columns:
-        #movie_title = 'Prometheus'
             movie = MovieRecommendation.get_movie_details_by_title(movie_title, self.data)
             recommendations = MovieRecommendation.get_movies_by_shared_actors(movie_title, self.data)
             actors = movie['Actors'].split(', ')
 
-            # Assert that the input movie is not in the recommendations
             self.assertNotIn(movie_title, recommendations)
 
             if recommendations:
-                # Assert that the recommended movies share actors with the input movie
                 for recommended_movie_title in recommendations:
                     recommended_movie = MovieRecommendation.get_movie_details_by_title(recommended_movie_title, self.data)
                     shared_actors = recommended_movie['Actors'].split(', ')
@@ -44,11 +41,9 @@ class TestMovieRecommendations(unittest.TestCase):
             recommendations = MovieRecommendation.get_movies_by_genre(movie_title, self.data)
             genres = movie['Genre'].split(', ')
 
-            # Assert that the input movie is not in the recommendations
             self.assertNotIn(movie_title, recommendations)
 
             if recommendations:
-                # Assert that the recommended movies share at least one genre with the input movie
                 for recommended_movie_title in recommendations:
                     recommended_movie = MovieRecommendation.get_movie_details_by_title(recommended_movie_title, self.data)
                     shared_genres = recommended_movie['Genre'].split(', ')
@@ -64,11 +59,9 @@ class TestMovieRecommendations(unittest.TestCase):
             recommendations = MovieRecommendation.get_movies_by_director(movie_title, self.data)
             director = movie['Director']
 
-            # Assert that the input movie is not in the recommendations
             self.assertNotIn(movie_title, recommendations)
 
             if recommendations:
-                # Assert that the recommended movies share the same director with the input movie
                 for recommended_movie_title in recommendations:
                     recommended_movie = MovieRecommendation.get_movie_details_by_title(recommended_movie_title, self.data)
                     recommended_movie_director = recommended_movie['Director']
