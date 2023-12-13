@@ -37,6 +37,7 @@ def get_movies_by_shared_actors(movie_title, data):
 
     shared_actors = selected_movie['Actors'].split(', ')
     related_movies = [movie['Title'] for movie in data if any(actor in movie['Actors'] for actor in shared_actors)]
+    related_movies.remove(movie_title)
     random_movies = random.sample(related_movies, min(10, len(related_movies)))
 
     return random_movies
@@ -52,6 +53,7 @@ def get_movies_by_genre(movie_title, data):
 
     genres = selected_movie['Genre'].split(', ')
     related_movies = [movie['Title'] for movie in data if any(genre.lower() in movie['Genre'].lower() for genre in genres)]
+    related_movies.remove(movie_title)
     random_movies = random.sample(related_movies, min(10, len(related_movies)))
 
     return random_movies
@@ -67,6 +69,7 @@ def get_movies_by_director(movie_title, data):
 
     director = selected_movie['Director']
     related_movies = [movie['Title'] for movie in data if director.lower() in movie['Director'].lower()]
+    related_movies.remove(movie_title)
     random_movies = random.sample(related_movies, min(10, len(related_movies)))
 
     return random_movies
