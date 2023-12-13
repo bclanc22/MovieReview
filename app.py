@@ -68,7 +68,7 @@ def get_movies_by_director(movie_title, data):
         return None
 
     director = selected_movie['Director']
-    related_movies = [movie['Title'] for movie in data if director.lower() in movie['Director'].lower()]
+    related_movies = [movie['Title'] for movie in data if director.lower() == movie['Director'].lower()]
     related_movies.remove(movie_title)
     random_movies = random.sample(related_movies, min(10, len(related_movies)))
 
